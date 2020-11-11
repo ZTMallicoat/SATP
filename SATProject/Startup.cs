@@ -1,8 +1,6 @@
-﻿using Microsoft.Owin;
-using Owin;
+﻿using Owin;
 
-[assembly: OwinStartupAttribute(typeof(SATProject.Startup))]
-namespace SATProject
+namespace SATProject.UI.MVC
 {
     public partial class Startup
     {

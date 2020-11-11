@@ -1,6 +1,6 @@
 ﻿using Owin;
 
-namespace SATProject.UI.MVC
+namespace SATProject
 {
     public partial class Startup
     {

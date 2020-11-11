@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace SATProject.UI.MVC
+namespace SATProject
 {
     public class FilterConfig
     {

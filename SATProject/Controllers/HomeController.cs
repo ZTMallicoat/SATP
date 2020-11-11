@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace SATProject.UI.MVC.Controllers
+namespace SATProject.Controllers
 {
     public class HomeController : Controller
     {

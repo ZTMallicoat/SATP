@@ -2,11 +2,11 @@
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using SATProject.UI.MVC.Models;
+using SATProject.Models;
 using Owin;
 using System;
 
-namespace SATProject.UI.MVC
+namespace SATProject
 {
     public partial class Startup
     {

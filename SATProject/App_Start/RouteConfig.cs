@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace SATProject.UI.MVC
+namespace SATProject
 {
     public class RouteConfig
     {

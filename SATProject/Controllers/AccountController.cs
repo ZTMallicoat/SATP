@@ -1,4 +1,4 @@
-﻿using SATProject.UI.MVC.Models;
+﻿using SATProject.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SATProject.UI.MVC.Controllers
+namespace SATProject.Controllers
 {
     [Authorize]
     public class AccountController : Controller

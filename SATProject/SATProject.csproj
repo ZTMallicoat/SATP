@@ -234,6 +234,7 @@
     <Content Include="Content\img\img_sm_3.jpg" />
     <Content Include="Content\img\img_sm_4.jpg" />
     <Content Include="Content\img\logo%402x.png" />
+    <Content Include="Content\img\logo.jpeg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\person_1.jpg" />
     <Content Include="Content\img\person_2.jpg" />

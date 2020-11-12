@@ -37,6 +37,7 @@ namespace SATProject.Controllers
         }
 
         // GET: Students/Create
+        [Authorize(Roles = "Admin,Scheduling")]
         public ActionResult Create()
         {
             ViewBag.SSID = new SelectList(db.StudentStatuses, "SSID", "SSName");
@@ -48,6 +49,7 @@ namespace SATProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Scheduling")]
         public ActionResult Create([Bind(Include = "StudentId,FirstName,LastName,Major,Address,City,State,Zip,Phone,Email,PhotoUrl,SSID")] Student student)
         {
             if (ModelState.IsValid)
@@ -62,6 +64,7 @@ namespace SATProject.Controllers
         }
 
         // GET: Students/Edit/5
+        [Authorize(Roles = "Admin,Scheduling")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +85,7 @@ namespace SATProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Scheduling")]
         public ActionResult Edit([Bind(Include = "StudentId,FirstName,LastName,Major,Address,City,State,Zip,Phone,Email,PhotoUrl,SSID")] Student student)
         {
             if (ModelState.IsValid)
@@ -95,6 +99,7 @@ namespace SATProject.Controllers
         }
 
         // GET: Students/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,6 +117,7 @@ namespace SATProject.Controllers
         // POST: Students/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Student student = db.Students.Find(id);

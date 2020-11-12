@@ -75,6 +75,7 @@ namespace SATProject.Controllers
         //
         // GET: /Users/Create
         [HttpGet]
+        [Authorize(Roles = "Admin,Scheduling")]
         public async Task<ActionResult> Create()
         {
             //Get the list of Roles
@@ -86,6 +87,7 @@ namespace SATProject.Controllers
         // POST: /Users/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Scheduling")]
         public async Task<ActionResult> Create(RegisterViewModel userViewModel, params string[] selectedRoles)
         {
             if (ModelState.IsValid)
@@ -123,6 +125,7 @@ namespace SATProject.Controllers
         //
         // GET: /Users/Edit/1
         [HttpGet]
+        [Authorize(Roles = "Admin,Scheduling")]
         public async Task<ActionResult> Edit(string id)
         {
             if (id == null)
@@ -154,6 +157,7 @@ namespace SATProject.Controllers
         // POST: /Users/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Scheduling")]
         public async Task<ActionResult> Edit([Bind(Include = "Email,Id")] EditUserViewModel editUser, params string[] selectedRole)
         {
             if (ModelState.IsValid)
@@ -194,6 +198,7 @@ namespace SATProject.Controllers
         //
         // GET: /Users/Delete/5
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(string id)
         {
             if (id == null)
@@ -213,6 +218,7 @@ namespace SATProject.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteConfirmed(string id)
         {
             if (ModelState.IsValid)

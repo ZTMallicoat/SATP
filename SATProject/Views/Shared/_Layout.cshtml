@@ -37,10 +37,14 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
                         <ul>
-                            <li><a href="https://twitter.com/educ_sportsug?lang=en"><i class="icon-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/EducSportsUg/"><i class="icon-facebook2"></i></a></li>
-                            <li><a href="https://www.instagram.com/educsportsug/?hl=en"><i class="icon-instagram2"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCNEvA5GEeJ9KuynQWHtcgXw"><i class="icon-youtube"></i></a></li>
+                            @*<li><a href="https://twitter.com/umkc?lang=en"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/UMKansasCity/"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/umkcinkansascity/?hl=en"><i class="icon-instagram2"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UChUrzGQzRqVxhKAV9n9nIPA*@
+                            <li><a href="https://twitter.com/umkc?lang=en"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/UMKansasCity/"><i class="icon-facebook2"></i></a></li>
+                            <li><a href="https://www.instagram.com/umkcinkansascity/?hl=en"><i class="icon-instagram2"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UChUrzGQzRqVxhKAV9n9nIPA"><i class="icon-youtube"></i></a></li>
                             @*<li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>*@
                         </ul>
                     </div>
@@ -67,6 +71,10 @@
                         <li>@Html.ActionLink("Courses", "Index", "Cours")</li>
                         <li>@Html.ActionLink("Our Mission", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        @if ((User.IsInRole("Student") || User.IsInRole("Admin") || User.IsInRole("Scheduling")) && Request.IsAuthenticated)
+                        {
+                        <li>@Html.ActionLink("Enroll Now", "Index", "ScheduledClasses")</li>
+                        }
                         <!--TODO: Only Teachers (2nd tier admin) have access to these tab-->
                         @if ((User.IsInRole("Admin")||User.IsInRole("Scheduling"))&&Request.IsAuthenticated)
                         {
@@ -78,7 +86,7 @@
                 </div>
             </div>
         </nav>
-        @RenderBody();
+        @RenderBody()
         <footer class="probootstrap-footer probootstrap-bg">
             <div class="container">
                 <div class="row">
@@ -88,14 +96,10 @@
                             <p>We at B.R.S. Tech are committed to being your rock in these trying times.  We will teach you about stuff and you will learn that stuff usually.  Come to our school, you'll not be a fool!</p>
                             <h3>Social</h3>
                             <ul class="probootstrap-footer-social">
-                                @*<li><a href="https://twitter.com/educ_sportsug?lang=en"><i class="icon-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/EducSportsUg/"><i class="icon-facebook2"></i></a></li>
-                                <li><a href="https://www.instagram.com/educsportsug/?hl=en"><i class="icon-instagram2"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCNEvA5GEeJ9KuynQWHtcgXw"><i class="icon-youtube"></i></a></li>*@
-                                <li><a href="https://twitter.com/educ_sportsug?lang=en"><i class="icon-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/EducSportsUg/"><i class="icon-facebook"></i></a></li>
-                                <li><a href="https://www.instagram.com/educsportsug/?hl=en"><i class="icon-instagram2"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCNEvA5GEeJ9KuynQWHtcgXw"><i class="icon-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/umkc?lang=en"><i class="icon-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/UMKansasCity/"><i class="icon-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/umkcinkansascity/?hl=en"><i class="icon-instagram2"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UChUrzGQzRqVxhKAV9n9nIPA"><i class="icon-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>

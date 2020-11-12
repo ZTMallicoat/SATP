@@ -11,7 +11,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.StartDate)
+            Start Date:
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EndDate)
+            End Date:
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.InstructorName)
+            Instructor:
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Location)
+            Location:
         </dt>
 
         <dd>
@@ -43,21 +43,21 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Cours.CourseName)
+            Course:
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Cours.CourseName)
         </dd>
-
+        @if ((User.IsInRole("Admin") || User.IsInRole("Scheduling"))&&Request.IsAuthenticated){
         <dt>
-            @Html.DisplayNameFor(model => model.ScheduledClassStatus.SCSName)
+            Class Status:
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ScheduledClassStatus.SCSName)
         </dd>
-
+        }
     </dl>
 </div>
 <p>

@@ -90,6 +90,7 @@ namespace SATProject.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
             return View(cours);
         }
 

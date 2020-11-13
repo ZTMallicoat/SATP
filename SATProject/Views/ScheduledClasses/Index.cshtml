@@ -15,7 +15,7 @@
                         <div class="text">
                             <span class="probootstrap-meta"><i class="icon-calendar2">@Html.DisplayFor(modelItem => item.StartDate)</i></span>
                             <h3>@Html.DisplayFor(modelItem => item.Cours.CourseName)</h3>
-                            <p>@Html.ActionLink("Enroll Now", "Details", new { id = item.ScheduledClassId }) <span class="enrolled-count">2,928 students enrolled</span></p>
+                            <p>@Html.ActionLink("Enroll Now", "Details", new { id = item.ScheduledClassId })</p>
                         </div>
                     </div>
                 </div>
@@ -31,22 +31,22 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.StartDate)
+                Start Date
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EndDate)
+                End Date
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.InstructorName)
+                Instructor Name
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Location)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cours.CourseName)
+                Course Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ScheduledClassStatus.SCSName)
+                Class Status
             </th>
             <th></th>
         </tr>

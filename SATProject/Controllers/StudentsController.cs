@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SATProject.DATA.EF;
+using System.IO;
 
 namespace SATProject.Controllers
 {
@@ -40,10 +41,12 @@ namespace SATProject.Controllers
 
         // GET: Students/Create
         [Authorize(Roles = "Admin,Scheduling")]
-        public ActionResult Create()
+        [HttpPost]
+        public ActionResult Create(HttpPostedFileBase file)
         {
             ViewBag.SSID = new SelectList(db.StudentStatuses, "SSID", "SSName");
             return View();
+
         }
 
         // POST: Students/Create

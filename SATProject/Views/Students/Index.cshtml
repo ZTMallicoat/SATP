@@ -11,9 +11,6 @@
 <table class="table">
     <tr>
         <th>
-            Image Url
-        </th>
-        <th>
             Student Name
         </th>
         <th>
@@ -36,9 +33,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhotoUrl)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.FirstName)
             @Html.DisplayFor(modelItem => item.LastName)

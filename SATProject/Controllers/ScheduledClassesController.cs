@@ -103,7 +103,7 @@ namespace SATProject.Controllers
         }
 
         // GET: ScheduledClasses/Delete/5
-        [Authorize(Roles = "Admin,")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
